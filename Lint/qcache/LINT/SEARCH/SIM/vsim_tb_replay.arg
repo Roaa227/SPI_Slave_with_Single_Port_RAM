@@ -1,0 +1,3 @@
+-f C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/LINT/SEARCH/SIM/vsim_tb_replay_top_modules.arg \
+-L work \
+-voptargs="-assertdebug"

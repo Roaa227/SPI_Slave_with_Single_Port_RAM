@@ -3,8 +3,8 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
     input clk, rst_n, MOSI, tx_valid, SS_n;
     input [7:0] tx_data;
 
-    output MISO, rx_valid;
-    output [9:0] rx_data;
+    output reg MISO, rx_valid;
+    output reg [9:0] rx_data;
 
 
     parameter IDLE = 0;
@@ -43,13 +43,11 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
 
                 else if(SS_n==0 && MOSI==1 && read_flag==0) begin
                     next_state = READ_ADD;
-                    // read_flag = 1;
                 end
 
 
                 else begin
                     next_state = READ_DATA;
-                    // read_flag = 0;
                 end
             end
 
@@ -80,8 +78,9 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
     end
 
     //output
-    reg [3:0] counter;
+    reg [4:0] counter;
     reg [9:0] shft_reg;
+    
     always @(posedge clk) begin
         if(~rst_n) begin
             counter <= 0;
@@ -91,18 +90,46 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
             MISO <= 0;
         end
         else begin
-            case (current_state)
-                WRITE: begin
-                    shft_reg <= {shft_reg[8:0], MOSI};
-                    counter <= counter + 1;
+            if(current_state == READ_ADD) begin
+                read_flag <= 1;
+            end
+            else if(current_state == READ_DATA) begin
+                read_flag <= 0;
+            end
 
-                    if(counter == 9) begin
-                        rx_valid <= 1;
-                        rx_data <= shft_reg;
-                        counter <= 0;
-                    end
+            if(current_state!=IDLE && current_state!=CHK_CMD)begin
+                shft_reg <= {shft_reg[8:0], MOSI};
+                
+                if (counter == 9) begin
+                    rx_valid <= 1;
+                    rx_data <= shft_reg;
+                end else begin
+                    rx_valid <= 0;
                 end
-            endcase
+
+                if (tx_valid && current_state == READ_DATA) begin
+                    case (counter)
+                        11: MISO <= tx_data[7];
+                        12: MISO <= tx_data[6];
+                        13: MISO <= tx_data[5];
+                        14: MISO <= tx_data[4];
+                        15: MISO <= tx_data[3];
+                        16: MISO <= tx_data[2];
+                        17: MISO <= tx_data[1];
+                        18: MISO <= tx_data[0];
+                        default: MISO <= 0;
+                    endcase
+                end else begin
+                    MISO <= 0;
+                end
+
+
+                if (!SS_n)
+                    counter <= counter + 1;
+                else
+                    counter <= 0;
+            end
+
         end
             
         

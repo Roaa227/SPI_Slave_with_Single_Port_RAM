@@ -1,0 +1,149 @@
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Tue Jul 29 21:04:42 2025 by hp on roaa
+
+
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Tue Jul 29 21:04:09 2025 by hp on roaa
+
+
+Command: netlist elaborate
+Command arguments:
+    -zdb
+      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_1
+    -tool lint
+    -d SPI_slave
+    -L work
+
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False)
+
+
+## Elaborating Design...
+Reading MTI mapping for library mapping
+Writing all MTI mappings to vmap output ...
+
+Top level modules:
+	SPI_slave
+
+Analyzing design...
+-- Loading module z0in_work.SPI_slave
+
+Performing 103 Lint Checks
+=============================
+
+Lint Stage 1 of 5 - Pre Design Elaboration (4 checks)
+------------------------------------------------------
+Optimizing 1 design-unit (inlining 0/1 module instances):
+-- Optimizing module z0in_work.SPI_slave(fast)
+Lint Stage-1 100% complete [Total Progress -   7%]
+
+Lint Stage 2 of 5 - Design Elaboration (66 checks)
+---------------------------------------------------
+Optimized design name is zi_opt_def_223884128_1
+Lint Stage-2 100% complete (1 out of 1 modules checked) [Total Progress -  23%]
+End of log Tue Jul 29 21:04:19 2025
+
+
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Tue Jul 29 21:04:22 2025 by hp on roaa
+
+
+Command: netlist create
+Command arguments:
+    -zdb
+      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_1
+    -tool lint
+    -d SPI_slave
+    -L work
+
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False)
+
+
+## Synthesizing netlist...
+
+Lint Stage 3 of 5 - Post Design Elaboration (17 checks)
+--------------------------------------------------------
+Lint Stage-3  24% complete [Total Progress -  27%]
+Lint Stage-3  47% complete [Total Progress -  29%]
+Lint Stage-3  71% complete [Total Progress -  32%]
+Lint Stage-3  94% complete [Total Progress -  34%]
+Lint Stage-3 100% complete [Total Progress -  35%]
+Analyzing designs.
+Elaborating module 'SPI_slave'.
+
+Lint Stage 4 of 5 - Design Synthesis (1 checks)
+------------------------------------------------
+Lint Stage-4 100% complete [Total Progress -  75%]
+
+Lint Stage 5 of 5 - Post Design Synthesis (15 checks)
+------------------------------------------------------
+Lint Stage-5  20% complete [Total Progress -  88%]
+Lint Stage-5  40% complete [Total Progress -  91%]
+Lint Stage-5  60% complete [Total Progress -  94%]
+Lint Stage-5  80% complete [Total Progress -  97%]
+Lint Stage-5 100% complete [Total Progress - 100%]
+
+Lint Checking Completed
+##Time Taken (Synthesis) = 2076.000000 ticks = 2.076000 secs
+
+End of log Tue Jul 29 21:04:31 2025
+
+
+# Reading design database from C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/LINT/CACHE...completed (0.005 (s)).
+End of log Tue Jul 29 21:04:33 2025
+
+
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Tue Jul 29 21:04:34 2025 by hp on roaa
+
+
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False)
+
+
+## Applying Lint Waivers...
+Final Process Statistics: Max memory 276MB, CPU time 19s, Total time 24s
+End of log Tue Jul 29 21:04:39 2025
+
+
+Result Summary
+-----------------------------------------------------------
+Error (0)
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+Warning (0)
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+Info (2)
+-----------------------------------------------------------
+  always_signal_assign_large              :1
+  multi_ports_in_single_line              :1
+
+-----------------------------------------------------------
+Resolved (0)
+-----------------------------------------------------------
+
+# Generating Debug Information...
+
+=================================================================
+To view results in batch
+  C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/lint.rpt
+
+To view results in GUI (Beta Version) 
+  qverify C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/lint.db
+=================================================================
