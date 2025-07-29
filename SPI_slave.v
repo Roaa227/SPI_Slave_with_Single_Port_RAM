@@ -14,7 +14,7 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
     parameter READ_DATA = 4;
 
 
-    reg read_flag;
+    reg read_flag = 0;
     reg [2:0] next_state, current_state;
 
 
@@ -41,11 +41,16 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
                 if(SS_n==0 && MOSI==0)
                     next_state = WRITE;
 
-                else if(SS_n==0 && MOSI==1 && read_flag==0)
+                else if(SS_n==0 && MOSI==1 && read_flag==0) begin
                     next_state = READ_ADD;
+                    // read_flag = 1;
+                end
 
-                else 
+
+                else begin
                     next_state = READ_DATA;
+                    // read_flag = 0;
+                end
             end
 
             WRITE: begin
@@ -75,7 +80,31 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
     end
 
     //output
+    reg [3:0] counter;
+    reg [9:0] shft_reg;
     always @(posedge clk) begin
+        if(~rst_n) begin
+            counter <= 0;
+            rx_data <= 0;
+            rx_valid <= 0;
+            shft_reg <= 0;
+            MISO <= 0;
+        end
+        else begin
+            case (current_state)
+                WRITE: begin
+                    shft_reg <= {shft_reg[8:0], MOSI};
+                    counter <= counter + 1;
+
+                    if(counter == 9) begin
+                        rx_valid <= 1;
+                        rx_data <= shft_reg;
+                        counter <= 0;
+                    end
+                end
+            endcase
+        end
+            
         
     end
 
