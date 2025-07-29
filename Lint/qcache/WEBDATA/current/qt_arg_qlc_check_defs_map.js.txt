@@ -1,6 +1,0 @@
-1#@#count
-2#@#limit
-3#@#module
-4#@#file
-5#@#line
-
