@@ -1,7 +1,11 @@
 module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_valid);
 
-    input clk, rst_n, MOSI, tx_data, tx_valid, SS_n;
-    output MISO, rx_data, rx_valid;
+    input clk, rst_n, MOSI, tx_valid, SS_n;
+    input [7:0] tx_data;
+
+    output MISO, rx_valid;
+    output [9:0] rx_data;
+
 
     parameter IDLE = 0;
     parameter CHK_CMD = 1;
@@ -11,7 +15,7 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
 
 
     reg read_flag;
-    reg next_state, current_state;
+    reg [2:0] next_state, current_state;
 
 
     //current state
