@@ -1,0 +1,3 @@
+C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/RAM.v#@#1
+C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/SPI_slave.v#@#3
+C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/SPI_slave_with_RAM.v#@#1

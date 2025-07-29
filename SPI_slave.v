@@ -130,9 +130,8 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
                     counter <= 0;
             end
 
-        end
-            
-        
+        end   
+         
     end
 
 endmodule

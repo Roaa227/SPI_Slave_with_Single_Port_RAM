@@ -4,7 +4,7 @@ module RAM#(
 )(
 input clk,rst_n,rx_valid,
 input[9:0] din,
-output reg [9:0] dout,
+output reg [7:0] dout,
 output reg tx_valid
 );
 
