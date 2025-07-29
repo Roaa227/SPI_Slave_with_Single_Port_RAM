@@ -15,7 +15,7 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
 
 
     //current state
-    always @(posedge clk or negedge rst_n) begin
+    always @(posedge clk) begin
         if(~rst_n) 
             current_state <= IDLE;
         else
@@ -71,7 +71,7 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
     end
 
     //output
-    always @(posedge clk or negedge rst_n) begin
+    always @(posedge clk) begin
         
     end
 
