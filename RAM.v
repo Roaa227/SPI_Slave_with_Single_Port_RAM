@@ -3,8 +3,8 @@ module RAM#(
     parameter ADDR_SIZE=8
 )(
 input clk,rst_n,rx_valid,
-input[9:0] din,
-output reg [7:0] dout,
+input[ADDR_SIZE+1:0] din,
+output reg [ADDR_SIZE-1:0] dout,
 output reg tx_valid
 );
 
