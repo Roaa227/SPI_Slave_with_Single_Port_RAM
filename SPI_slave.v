@@ -123,12 +123,10 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
                     MISO <= 0;
                 end
 
-
-                if (!SS_n)
-                    counter <= counter + 1;
+                counter <= counter + 1;
+            end
                 else
                     counter <= 0;
-            end
 
         end   
          
