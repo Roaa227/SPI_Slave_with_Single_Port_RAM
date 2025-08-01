@@ -21,7 +21,7 @@ C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverifyek
 Command: qlc_status_update
 Command Arguments:
     -zdb
-      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_28
+      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_11
     -db
       C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/lint.db
 

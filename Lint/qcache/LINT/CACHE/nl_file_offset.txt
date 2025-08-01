@@ -1,5 +1,5 @@
 SPI_slave.aedb:0
-SPI_slave_425911942.aedb:145419
+SPI_slave_425911942.aedb:203254
 RAM_778428292.aedb:58571
-SPI_slave_with_RAM.aedb:192004
-RAM_1108642333.aedb:174577
+SPI_slave_with_RAM.aedb:249839
+RAM_1108642333.aedb:232412

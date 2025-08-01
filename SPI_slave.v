@@ -90,43 +90,99 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
             MISO <= 0;
         end
         else begin
-            if(current_state == READ_ADD) begin
-                read_flag <= 1;
-            end
-            else if(current_state == READ_DATA) begin
-                read_flag <= 0;
-            end
-
-            if(current_state!=IDLE && current_state!=CHK_CMD)begin
-                shft_reg <= {shft_reg[8:0], MOSI};
-                
-                if (counter == 9) begin
-                    rx_valid <= 1;
-                    rx_data <= shft_reg;
-                end else begin
+            case (current_state)
+                IDLE: begin
+                    counter <= 0;
+                    rx_data <= 0;
                     rx_valid <= 0;
-                end
-
-                if (tx_valid && current_state == READ_DATA) begin
-                    case (counter)
-                        11: MISO <= tx_data[7];
-                        12: MISO <= tx_data[6];
-                        13: MISO <= tx_data[5];
-                        14: MISO <= tx_data[4];
-                        15: MISO <= tx_data[3];
-                        16: MISO <= tx_data[2];
-                        17: MISO <= tx_data[1];
-                        18: MISO <= tx_data[0];
-                        default: MISO <= 0;
-                    endcase
-                end else begin
+                    shft_reg <= 0;
                     MISO <= 0;
                 end
 
-                counter <= counter + 1;
-            end
-                else
+                CHK_CMD: begin
                     counter <= 0;
+                    rx_data <= 0;
+                    rx_valid <= 0;
+                    shft_reg <= 0;
+                    MISO <= 0;
+                end
+
+                WRITE: begin
+                    if (counter < 10) begin
+                        shft_reg <= {shft_reg[8:0], MOSI};
+
+                        if (counter == 9) begin
+                            rx_valid <= 1;
+                            rx_data <= shft_reg;
+                        end else begin
+                            rx_valid <= 0;
+                        end
+                        counter <= counter + 1;
+                    end else begin
+                        counter <= 0; 
+                    end
+                end
+
+                READ_ADD: begin
+                    read_flag <= 1;
+
+                    if (counter <= 10) begin
+                        shft_reg <= {shft_reg[8:0], MOSI};
+
+                        if (counter == 10) begin
+                            rx_valid <= 1;
+                            rx_data <= shft_reg;
+                        end else begin
+                            rx_valid <= 0;
+                        end
+
+                        counter <= counter + 1;
+                    end else begin
+                        counter <= 0; 
+                    end
+
+                end
+
+                READ_DATA: begin
+                    read_flag <= 0;
+
+                    if (counter <= 19) begin
+
+                        if (counter <= 10) begin  
+                            shft_reg <= {shft_reg[8:0], MOSI};
+
+                            if (counter == 10) begin
+                                rx_valid <= 1;
+                                rx_data <= shft_reg;  // Now includes first MOSI bit
+                            end else begin
+                                rx_valid <= 0;
+                            end
+                        end else begin  // Next 8 bits: transmit on MISO
+                            rx_valid <= 0;  // No more receive data
+
+                            if (tx_valid) begin
+                                case (counter)
+                                    12: MISO <= tx_data[7];
+                                    13: MISO <= tx_data[6];
+                                    14: MISO <= tx_data[5];
+                                    15: MISO <= tx_data[4];
+                                    16: MISO <= tx_data[3];
+                                    17: MISO <= tx_data[2];
+                                    18: MISO <= tx_data[1];
+                                    19: MISO <= tx_data[0];
+                                    default: MISO <= 0;
+                                endcase
+                            end else begin
+                                MISO <= 0;
+                            end
+                        end
+
+                        counter <= counter + 1;
+                        
+                    end else
+                        counter <= 0; // Reset counter after receiving data
+                end
+            endcase
 
         end   
          
