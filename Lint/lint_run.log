@@ -2,20 +2,20 @@
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Thu Jul 31 22:36:12 2025 by hp on roaa
+log created Sat Aug  2 18:13:25 2025 by hp on roaa
 
 
 # 
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Thu Jul 31 22:35:16 2025 by hp on roaa
+log created Sat Aug  2 18:12:40 2025 by hp on roaa
 
 
 Command: netlist elaborate
 Command arguments:
     -zdb
-      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_10
+      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_14
     -tool lint
     -d SPI_slave_with_RAM
     -L work
@@ -53,20 +53,20 @@ Lint Stage-2  33% complete (1 out of 3 modules checked) [Total Progress -  11%]
 Lint Stage-2  67% complete (2 out of 3 modules checked) [Total Progress -  17%]
 Optimized design name is zi_opt_def_223884128_1
 Lint Stage-2 100% complete (3 out of 3 modules checked) [Total Progress -  23%]
-End of log Thu Jul 31 22:35:37 2025
+End of log Sat Aug  2 18:12:52 2025
 
 
 # 
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Thu Jul 31 22:35:43 2025 by hp on roaa
+log created Sat Aug  2 18:12:56 2025 by hp on roaa
 
 
 Command: netlist create
 Command arguments:
     -zdb
-      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_10
+      C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_14
     -tool lint
     -d SPI_slave_with_RAM
     -L work
@@ -102,20 +102,20 @@ Lint Stage-5  80% complete [Total Progress -  97%]
 Lint Stage-5 100% complete [Total Progress - 100%]
 
 Lint Checking Completed
-##Time Taken (Synthesis) = 3460.000000 ticks = 3.460000 secs
+##Time Taken (Synthesis) = 3521.000000 ticks = 3.521000 secs
 
-End of log Thu Jul 31 22:35:56 2025
+End of log Sat Aug  2 18:13:09 2025
 
 
 # Reading design database from C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/LINT/CACHE...completed (0.003 (s)).
-End of log Thu Jul 31 22:35:59 2025
+End of log Sat Aug  2 18:13:13 2025
 
 
 # 
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Thu Jul 31 22:36:00 2025 by hp on roaa
+log created Sat Aug  2 18:13:13 2025 by hp on roaa
 
 
 Questa Debug flags:
@@ -123,8 +123,8 @@ Questa Debug flags:
 
 
 ## Applying Lint Waivers...
-Final Process Statistics: Max memory 276MB, CPU time 9s, Total time 45s
-End of log Thu Jul 31 22:36:09 2025
+Final Process Statistics: Max memory 276MB, CPU time 10s, Total time 33s
+End of log Sat Aug  2 18:13:21 2025
 
 
 Result Summary

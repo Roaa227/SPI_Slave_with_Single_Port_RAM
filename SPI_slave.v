@@ -146,30 +146,30 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
                 READ_DATA: begin
                     read_flag <= 0;
 
-                    if (counter <= 19) begin
+                    if (counter <= 20) begin
 
                         if (counter <= 10) begin  
                             shft_reg <= {shft_reg[8:0], MOSI};
 
                             if (counter == 10) begin
                                 rx_valid <= 1;
-                                rx_data <= shft_reg;  // Now includes first MOSI bit
+                                rx_data <= shft_reg; 
                             end else begin
                                 rx_valid <= 0;
                             end
-                        end else begin  // Next 8 bits: transmit on MISO
-                            rx_valid <= 0;  // No more receive data
+                        end else begin  
+                            rx_valid <= 0; 
 
                             if (tx_valid) begin
                                 case (counter)
-                                    12: MISO <= tx_data[7];
-                                    13: MISO <= tx_data[6];
-                                    14: MISO <= tx_data[5];
-                                    15: MISO <= tx_data[4];
-                                    16: MISO <= tx_data[3];
-                                    17: MISO <= tx_data[2];
-                                    18: MISO <= tx_data[1];
-                                    19: MISO <= tx_data[0];
+                                    13: MISO <= tx_data[7];
+                                    14: MISO <= tx_data[6];
+                                    15: MISO <= tx_data[5];
+                                    16: MISO <= tx_data[4];
+                                    17: MISO <= tx_data[3];
+                                    18: MISO <= tx_data[2];
+                                    19: MISO <= tx_data[1];
+                                    20: MISO <= tx_data[0];
                                     default: MISO <= 0;
                                 endcase
                             end else begin
@@ -180,7 +180,7 @@ module SPI_slave(clk, rst_n, MOSI, tx_data, tx_valid, SS_n, MISO, rx_data, rx_va
                         counter <= counter + 1;
                         
                     end else
-                        counter <= 0; // Reset counter after receiving data
+                        counter <= 0; 
                 end
             endcase
 

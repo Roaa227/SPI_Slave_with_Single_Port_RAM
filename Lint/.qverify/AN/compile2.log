@@ -1,10 +1,10 @@
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-Start time: 21:39:05 on Jul 29,2025
+Start time: 18:12:34 on Aug 02,2025
 vlog C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/RAM.v C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/SPI_slave_with_RAM.v -work work 
 -- Compiling module RAM
 -- Compiling module SPI_slave_with_RAM
 
 Top level modules:
 	SPI_slave_with_RAM
-End time: 21:39:05 on Jul 29,2025, Elapsed time: 0:00:00
+End time: 18:12:34 on Aug 02,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

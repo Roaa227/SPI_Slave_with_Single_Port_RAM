@@ -22,5 +22,5 @@ infact=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../infac
 vhdlopt_lib=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../vhdlopt_lib
 vh_ux01v_lib=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../vh_ux01v_lib
 work=./work
-*RAW_COMMAND create_netlist -zdb C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_10 -tool lint -d SPI_slave_with_RAM -L work 
+*RAW_COMMAND create_netlist -zdb C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_14 -tool lint -d SPI_slave_with_RAM -L work 
 *COMMAND create_netlist 

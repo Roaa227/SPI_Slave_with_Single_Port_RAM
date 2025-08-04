@@ -235,3 +235,54 @@ Questa Debug flags:
 
 # C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 418
 C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vlib work
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 207
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vlib work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 414
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vlib work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 415
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vlib work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 416
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vmap work work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 417
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vlog C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/SPI_slave.v -work work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 418
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/vlog C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/RAM.v C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/SPI_slave_with_RAM.v -work work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 624
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverifyek  -od C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint -l .elab.log  -cli -internal -cmd elab -zdb C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_14 -tool lint -d SPI_slave_with_RAM -L work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 624
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverifyek  -od C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint -l .createnl.log  -cli -internal -cmd create_netlist -zdb C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_14 -tool lint -d SPI_slave_with_RAM -L work
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False) signal for any gui required action
+
+
+# C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverify_ui_cmds.tcl : 626
+C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverifyek  -od C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint -l .qlcstatus.log  -cli -internal -cmd qlc_status_update -zdb C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/qcache/DB/zdb_15 -db C:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM/Lint/lint.db
