@@ -1,0 +1,114 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/hp/OneDrive/Desktop/DD_Diploma/asg5
+T_opt
+!s110 1757079101
+VGZ;c>C<6Mn]T_?M:7g>G10
+04 16 4 work instantiation_tb fast 0
+=2-7c4d8f13b2e8-68bae63c-291-6a00
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vinstantiation_tb
+Z2 !s110 1757079100
+!i10b 1
+!s100 2O?bRgkOCMiaez:LNaINW0
+IdaL1`H23;Wi8H8zC^0z8W3
+Z3 dC:/Users/hp/OneDrive/Desktop/DD_Diploma/SPI_Slave_with_Single_Port_RAM
+w1757078486
+8TestBench.v
+FTestBench.v
+!i122 28
+L0 1 88
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1757079100.000000
+!s107 TestBench.v|
+!s90 -reportprogress|300|TestBench.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vRAM
+R2
+!i10b 1
+!s100 @G:`o3gC0V@GaZV8n]egJ2
+IA?1eHG5A<O9[[ma2iSAgQ3
+R3
+w1757077892
+8RAM.v
+FRAM.v
+!i122 25
+L0 1 40
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 RAM.v|
+!s90 -reportprogress|300|RAM.v|
+!i113 0
+R7
+R1
+n@r@a@m
+vSPI_slave
+R2
+!i10b 1
+!s100 MQW8FECIXnO2=X;_Jz9Dn1
+InAUaJNgLIc^6087EkWNBh0
+R3
+w1754311174
+8SPI_slave.v
+FSPI_slave.v
+!i122 26
+L0 1 191
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 SPI_slave.v|
+!s90 -reportprogress|300|SPI_slave.v|
+!i113 0
+R7
+R1
+n@s@p@i_slave
+vSPI_slave_with_RAM
+R2
+!i10b 1
+!s100 UVo<`MNSZ]Qkc2H_1[T4[0
+IXEjP:jao:R2kjBd?jWJ`B3
+R3
+w1757078249
+8SPI_slave_with_RAM.v
+FSPI_slave_with_RAM.v
+!i122 27
+L0 1 36
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 SPI_slave_with_RAM.v|
+!s90 -reportprogress|300|SPI_slave_with_RAM.v|
+!i113 0
+R7
+R1
+n@s@p@i_slave_with_@r@a@m

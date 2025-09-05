@@ -18,9 +18,7 @@ module instantiation_tb;
     // Clock generation
     initial begin
         clk = 0;
-        forev
-
-er #5 clk = ~clk;
+        forever #5 clk = ~clk;
     end
 
     // SPI send task (MSB first)
